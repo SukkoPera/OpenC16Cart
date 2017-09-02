@@ -29,6 +29,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:C16-Exp-Port
+LIBS:OpenC16Cart-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -53,18 +54,6 @@ F 2 "Sukko:C16_Cart_Conn" H 3100 2000 50  0001 C CNN
 F 3 "DOCUMENTATION" H 3100 1900 50  0001 C CNN
 	1    3100 3650
 	1    0    0    -1  
-$EndComp
-$Comp
-L 27128 U1
-U 1 1 5984F66B
-P 6400 3550
-F 0 "U1" H 6150 4550 50  0000 C CNN
-F 1 "27128" H 6400 2550 50  0000 C CNN
-F 2 "pth_circuits:dil_28-600" H 6400 3550 50  0001 C CNN
-F 3 "" H 6400 3550 50  0000 C CNN
-F 4 "LO" H 6700 4550 60  0000 C CNN "ROM"
-	1    6400 3550
-	1    0    0    1   
 $EndComp
 $Comp
 L GND #PWR01
@@ -168,20 +157,9 @@ NoConn ~ 2350 4650
 NoConn ~ 2350 4750
 $Comp
 L VCC #PWR08
-U 1 1 59850923
-P 5250 2500
-F 0 "#PWR08" H 5250 2350 50  0001 C CNN
-F 1 "VCC" H 5250 2650 50  0000 C CNN
-F 2 "" H 5250 2500 50  0000 C CNN
-F 3 "" H 5250 2500 50  0000 C CNN
-	1    5250 2500
-	1    0    0    -1  
-$EndComp
-$Comp
-L VCC #PWR09
 U 1 1 59850A78
 P 10550 750
-F 0 "#PWR09" H 10550 600 50  0001 C CNN
+F 0 "#PWR08" H 10550 600 50  0001 C CNN
 F 1 "VCC" H 10550 900 50  0000 C CNN
 F 2 "" H 10550 750 50  0000 C CNN
 F 3 "" H 10550 750 50  0000 C CNN
@@ -189,10 +167,10 @@ F 3 "" H 10550 750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR010
+L GND #PWR09
 U 1 1 59850A8C
 P 10900 900
-F 0 "#PWR010" H 10900 650 50  0001 C CNN
+F 0 "#PWR09" H 10900 650 50  0001 C CNN
 F 1 "GND" H 10900 750 50  0000 C CNN
 F 2 "" H 10900 900 50  0000 C CNN
 F 3 "" H 10900 900 50  0000 C CNN
@@ -200,10 +178,10 @@ F 3 "" H 10900 900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG011
+L PWR_FLAG #FLG010
 U 1 1 59850AA5
 P 10900 800
-F 0 "#FLG011" H 10900 895 50  0001 C CNN
+F 0 "#FLG010" H 10900 895 50  0001 C CNN
 F 1 "PWR_FLAG" H 10900 980 50  0000 C CNN
 F 2 "" H 10900 800 50  0000 C CNN
 F 3 "" H 10900 800 50  0000 C CNN
@@ -211,10 +189,10 @@ F 3 "" H 10900 800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG012
+L PWR_FLAG #FLG011
 U 1 1 59850AC3
 P 10550 900
-F 0 "#FLG012" H 10550 995 50  0001 C CNN
+F 0 "#FLG011" H 10550 995 50  0001 C CNN
 F 1 "PWR_FLAG" H 10550 1080 50  0000 C CNN
 F 2 "" H 10550 900 50  0000 C CNN
 F 3 "" H 10550 900 50  0000 C CNN
@@ -258,18 +236,6 @@ Entry Wire Line
 	1900 4250 2000 4350
 Entry Wire Line
 	1900 4350 2000 4450
-$Comp
-L 27128 U2
-U 1 1 59859C43
-P 9050 3550
-F 0 "U2" H 8800 4550 50  0000 C CNN
-F 1 "27128" H 9050 2550 50  0000 C CNN
-F 2 "pth_circuits:dil_28-600" H 9050 3550 50  0001 C CNN
-F 3 "" H 9050 3550 50  0000 C CNN
-F 4 "HI" H 9350 4550 60  0000 C CNN "ROM"
-	1    9050 3550
-	1    0    0    1   
-$EndComp
 Entry Wire Line
 	9900 3750 10000 3850
 Entry Wire Line
@@ -346,10 +312,10 @@ F 3 "" H 9700 2950 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L VCC #PWR013
+L VCC #PWR012
 U 1 1 5985A10D
 P 7050 2700
-F 0 "#PWR013" H 7050 2550 50  0001 C CNN
+F 0 "#PWR012" H 7050 2550 50  0001 C CNN
 F 1 "VCC" H 7050 2850 50  0000 C CNN
 F 2 "" H 7050 2700 50  0000 C CNN
 F 3 "" H 7050 2700 50  0000 C CNN
@@ -357,10 +323,10 @@ F 3 "" H 7050 2700 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR014
+L GND #PWR013
 U 1 1 5985A113
 P 7050 3350
-F 0 "#PWR014" H 7050 3100 50  0001 C CNN
+F 0 "#PWR013" H 7050 3100 50  0001 C CNN
 F 1 "GND" H 7050 3200 50  0000 C CNN
 F 2 "" H 7050 3350 50  0000 C CNN
 F 3 "" H 7050 3350 50  0000 C CNN
@@ -409,6 +375,400 @@ Text Label 3850 4350 0    60   ~ 0
 a1
 Text Label 3850 4450 0    60   ~ 0
 a0
+Entry Wire Line
+	5250 3350 5350 3450
+Entry Wire Line
+	5250 3450 5350 3550
+Entry Wire Line
+	5250 3550 5350 3650
+Entry Wire Line
+	5250 3650 5350 3750
+Entry Wire Line
+	5250 3750 5350 3850
+Entry Wire Line
+	5250 3850 5350 3950
+Entry Wire Line
+	5250 3950 5350 4050
+Entry Wire Line
+	5250 4050 5350 4150
+Entry Wire Line
+	5250 4150 5350 4250
+Entry Wire Line
+	5250 4250 5350 4350
+Entry Wire Line
+	5250 4350 5350 4450
+Text Label 5350 3250 0    60   ~ 0
+a12
+Text Label 5350 3450 0    60   ~ 0
+a10
+Text Label 5350 3550 0    60   ~ 0
+a9
+Text Label 5350 3650 0    60   ~ 0
+a8
+Text Label 5350 3750 0    60   ~ 0
+a7
+Text Label 5350 3850 0    60   ~ 0
+a6
+Text Label 5350 3950 0    60   ~ 0
+a5
+Text Label 5350 4050 0    60   ~ 0
+a4
+Text Label 5350 4150 0    60   ~ 0
+a3
+Text Label 5350 4250 0    60   ~ 0
+a2
+Text Label 5350 4350 0    60   ~ 0
+a1
+Text Label 5350 4450 0    60   ~ 0
+a0
+Entry Wire Line
+	7900 3350 8000 3450
+Entry Wire Line
+	7900 3450 8000 3550
+Entry Wire Line
+	7900 3550 8000 3650
+Entry Wire Line
+	7900 3650 8000 3750
+Entry Wire Line
+	7900 3750 8000 3850
+Entry Wire Line
+	7900 3850 8000 3950
+Entry Wire Line
+	7900 3950 8000 4050
+Entry Wire Line
+	7900 4050 8000 4150
+Entry Wire Line
+	7900 4150 8000 4250
+Entry Wire Line
+	7900 4250 8000 4350
+Entry Wire Line
+	7900 4350 8000 4450
+Text Label 8000 3250 0    60   ~ 0
+a12
+Text Label 8000 3450 0    60   ~ 0
+a10
+Text Label 8000 3550 0    60   ~ 0
+a9
+Text Label 8000 3650 0    60   ~ 0
+a8
+Text Label 8000 3750 0    60   ~ 0
+a7
+Text Label 8000 3850 0    60   ~ 0
+a6
+Text Label 8000 3950 0    60   ~ 0
+a5
+Text Label 8000 4050 0    60   ~ 0
+a4
+Text Label 8000 4150 0    60   ~ 0
+a3
+Text Label 8000 4250 0    60   ~ 0
+a2
+Text Label 8000 4350 0    60   ~ 0
+a1
+Text Label 8000 4450 0    60   ~ 0
+a0
+Text Label 3850 3450 0    60   ~ 0
+a10
+Text Label 3850 3350 0    60   ~ 0
+a11_conn
+Text Label 3850 3250 0    60   ~ 0
+a12
+Text Label 3850 3150 0    60   ~ 0
+a13_conn
+$Comp
+L CONN_01X03 J2
+U 1 1 5985B827
+P 2700 950
+F 0 "J2" H 2700 1150 50  0000 C CNN
+F 1 "CONN_01X03" V 2800 950 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 2700 950 50  0001 C CNN
+F 3 "" H 2700 950 50  0000 C CNN
+	1    2700 950 
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 J3
+U 1 1 5985B872
+P 3850 950
+F 0 "J3" H 3850 1150 50  0000 C CNN
+F 1 "CONN_01X03" V 3950 950 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 3850 950 50  0001 C CNN
+F 3 "" H 3850 950 50  0000 C CNN
+	1    3850 950 
+	-1   0    0    -1  
+$EndComp
+Text Label 1750 950  0    60   ~ 0
+a13_conn
+$Comp
+L VCC #PWR014
+U 1 1 5985BD5B
+P 2200 850
+F 0 "#PWR014" H 2200 700 50  0001 C CNN
+F 1 "VCC" H 2200 1000 50  0000 C CNN
+F 2 "" H 2200 850 50  0000 C CNN
+F 3 "" H 2200 850 50  0000 C CNN
+	1    2200 850 
+	1    0    0    -1  
+$EndComp
+Text Label 5350 3150 0    60   ~ 0
+a13_u1
+Text Label 8000 3150 0    60   ~ 0
+a13_u2
+Text Label 800  850  0    60   ~ 0
+a13_u1
+Text Label 2900 950  0    60   ~ 0
+a11_u1
+Text Label 5350 3350 0    60   ~ 0
+a11_u1
+Text Label 8000 3350 0    60   ~ 0
+a11_u2
+Text Label 2900 850  0    60   ~ 0
+a11_conn
+Text Label 2900 1050 0    60   ~ 0
+a12
+Text Label 4050 1050 0    60   ~ 0
+a11_conn
+Text Label 5350 2750 0    60   ~ 0
+/ce_u1
+Text Label 4050 950  0    60   ~ 0
+/ce_u1
+$Comp
+L GND #PWR015
+U 1 1 5985D3ED
+P 4700 850
+F 0 "#PWR015" H 4700 600 50  0001 C CNN
+F 1 "GND" H 4700 700 50  0000 C CNN
+F 2 "" H 4700 850 50  0000 C CNN
+F 3 "" H 4700 850 50  0000 C CNN
+	1    4700 850 
+	1    0    0    -1  
+$EndComp
+Text Label 8000 2750 0    60   ~ 0
+/ce_u2
+$Comp
+L CONN_01X03 J5
+U 1 1 5985DC42
+P 7600 950
+F 0 "J5" H 7600 1150 50  0000 C CNN
+F 1 "CONN_01X03" V 7700 950 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 7600 950 50  0001 C CNN
+F 3 "" H 7600 950 50  0000 C CNN
+	1    7600 950 
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 J6
+U 1 1 5985DC9A
+P 8750 950
+F 0 "J6" H 8750 1150 50  0000 C CNN
+F 1 "CONN_01X03" V 8850 950 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 8750 950 50  0001 C CNN
+F 3 "" H 8750 950 50  0000 C CNN
+	1    8750 950 
+	-1   0    0    -1  
+$EndComp
+Text Label 7800 850  0    60   ~ 0
+a11_conn
+Text Label 7800 950  0    60   ~ 0
+a11_u2
+Text Label 7800 1050 0    60   ~ 0
+a12
+Text Label 8950 950  0    60   ~ 0
+/ce_u2
+Text Label 8950 1050 0    60   ~ 0
+a11_conn
+$Comp
+L GND #PWR016
+U 1 1 5985E9CF
+P 9600 850
+F 0 "#PWR016" H 9600 600 50  0001 C CNN
+F 1 "GND" H 9600 700 50  0000 C CNN
+F 2 "" H 9600 850 50  0000 C CNN
+F 3 "" H 9600 850 50  0000 C CNN
+	1    9600 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L 27512 U1
+U 1 1 59A9E653
+P 6400 3550
+F 0 "U1" H 6700 2550 50  0000 C CNN
+F 1 "27512 - LO ROM" H 6400 4550 50  0000 C CNN
+F 2 "pth_circuits:dil_28-600_socket" H 6400 3550 50  0001 C CNN
+F 3 "" H 6400 3550 50  0000 C CNN
+	1    6400 3550
+	1    0    0    1   
+$EndComp
+$Comp
+L 27512 U2
+U 1 1 59A9E8AA
+P 9050 3550
+F 0 "U2" H 9350 2550 50  0000 C CNN
+F 1 "27512 - HI ROM" H 9050 4550 50  0000 C CNN
+F 2 "pth_circuits:dil_28-600_socket" H 9050 3550 50  0001 C CNN
+F 3 "" H 9050 3550 50  0000 C CNN
+	1    9050 3550
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_01X03 J11
+U 1 1 59A9EEAD
+P 1800 1550
+F 0 "J11" H 1800 1750 50  0000 C CNN
+F 1 "CONN_01X03" V 1900 1550 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 1800 1550 50  0001 C CNN
+F 3 "" H 1800 1550 50  0000 C CNN
+	1    1800 1550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR017
+U 1 1 59A9EEB7
+P 2450 1450
+F 0 "#PWR017" H 2450 1300 50  0001 C CNN
+F 1 "VCC" H 2450 1600 50  0000 C CNN
+F 2 "" H 2450 1450 50  0000 C CNN
+F 3 "" H 2450 1450 50  0000 C CNN
+	1    2450 1450
+	1    0    0    -1  
+$EndComp
+Text Label 5350 2950 0    60   ~ 0
+a15_u1
+Text Label 5350 3050 0    60   ~ 0
+a14_u1
+Text Label 8000 2950 0    60   ~ 0
+a15_u2
+Text Label 8000 3050 0    60   ~ 0
+a14_u2
+Text Label 2000 1550 0    60   ~ 0
+a14_u1
+$Comp
+L GND #PWR018
+U 1 1 59A9F3E5
+P 2450 1650
+F 0 "#PWR018" H 2450 1400 50  0001 C CNN
+F 1 "GND" H 2450 1500 50  0000 C CNN
+F 2 "" H 2450 1650 50  0000 C CNN
+F 3 "" H 2450 1650 50  0000 C CNN
+	1    2450 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 J12
+U 1 1 59A9F478
+P 2950 1550
+F 0 "J12" H 2950 1750 50  0000 C CNN
+F 1 "CONN_01X03" V 3050 1550 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 2950 1550 50  0001 C CNN
+F 3 "" H 2950 1550 50  0000 C CNN
+	1    2950 1550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR019
+U 1 1 59A9F480
+P 3600 1450
+F 0 "#PWR019" H 3600 1300 50  0001 C CNN
+F 1 "VCC" H 3600 1600 50  0000 C CNN
+F 2 "" H 3600 1450 50  0000 C CNN
+F 3 "" H 3600 1450 50  0000 C CNN
+	1    3600 1450
+	1    0    0    -1  
+$EndComp
+Text Label 3150 1550 0    60   ~ 0
+a15_u1
+$Comp
+L GND #PWR020
+U 1 1 59A9F489
+P 3600 1650
+F 0 "#PWR020" H 3600 1400 50  0001 C CNN
+F 1 "GND" H 3600 1500 50  0000 C CNN
+F 2 "" H 3600 1650 50  0000 C CNN
+F 3 "" H 3600 1650 50  0000 C CNN
+	1    3600 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 J21
+U 1 1 59A9F755
+P 6700 1550
+F 0 "J21" H 6700 1750 50  0000 C CNN
+F 1 "CONN_01X03" V 6800 1550 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 6700 1550 50  0001 C CNN
+F 3 "" H 6700 1550 50  0000 C CNN
+	1    6700 1550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR021
+U 1 1 59A9F75D
+P 7350 1450
+F 0 "#PWR021" H 7350 1300 50  0001 C CNN
+F 1 "VCC" H 7350 1600 50  0000 C CNN
+F 2 "" H 7350 1450 50  0000 C CNN
+F 3 "" H 7350 1450 50  0000 C CNN
+	1    7350 1450
+	1    0    0    -1  
+$EndComp
+Text Label 6900 1550 0    60   ~ 0
+a14_u2
+$Comp
+L GND #PWR022
+U 1 1 59A9F766
+P 7350 1650
+F 0 "#PWR022" H 7350 1400 50  0001 C CNN
+F 1 "GND" H 7350 1500 50  0000 C CNN
+F 2 "" H 7350 1650 50  0000 C CNN
+F 3 "" H 7350 1650 50  0000 C CNN
+	1    7350 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 J22
+U 1 1 59A9F76C
+P 7850 1550
+F 0 "J22" H 7850 1750 50  0000 C CNN
+F 1 "CONN_01X03" V 7950 1550 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 7850 1550 50  0001 C CNN
+F 3 "" H 7850 1550 50  0000 C CNN
+	1    7850 1550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR023
+U 1 1 59A9F774
+P 8500 1450
+F 0 "#PWR023" H 8500 1300 50  0001 C CNN
+F 1 "VCC" H 8500 1600 50  0000 C CNN
+F 2 "" H 8500 1450 50  0000 C CNN
+F 3 "" H 8500 1450 50  0000 C CNN
+	1    8500 1450
+	1    0    0    -1  
+$EndComp
+Text Label 8050 1550 0    60   ~ 0
+a15_u2
+$Comp
+L GND #PWR024
+U 1 1 59A9F77D
+P 8500 1650
+F 0 "#PWR024" H 8500 1400 50  0001 C CNN
+F 1 "GND" H 8500 1500 50  0000 C CNN
+F 2 "" H 8500 1650 50  0000 C CNN
+F 3 "" H 8500 1650 50  0000 C CNN
+	1    8500 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_02X03 J1
+U 1 1 59AA7F05
+P 1500 950
+F 0 "J1" H 1500 1150 50  0000 C CNN
+F 1 "CONN_02X03" H 1500 750 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x03" H 1500 -250 50  0001 C CNN
+F 3 "" H 1500 -250 50  0000 C CNN
+	1    1500 950 
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	2200 4950 2200 4850
 Wire Wire Line
@@ -434,13 +794,6 @@ Wire Wire Line
 	9700 3100 9700 3300
 Wire Wire Line
 	9700 2800 9700 2650
-Wire Wire Line
-	5700 2950 5250 2950
-Wire Wire Line
-	5250 2500 5250 3050
-Wire Wire Line
-	5250 3050 5700 3050
-Connection ~ 5250 2950
 Wire Wire Line
 	10550 750  10550 900 
 Wire Wire Line
@@ -561,56 +914,10 @@ Wire Wire Line
 	5700 4350 5350 4350
 Wire Wire Line
 	5700 4450 5350 4450
-Entry Wire Line
-	5250 3350 5350 3450
-Entry Wire Line
-	5250 3450 5350 3550
-Entry Wire Line
-	5250 3550 5350 3650
-Entry Wire Line
-	5250 3650 5350 3750
-Entry Wire Line
-	5250 3750 5350 3850
-Entry Wire Line
-	5250 3850 5350 3950
-Entry Wire Line
-	5250 3950 5350 4050
-Entry Wire Line
-	5250 4050 5350 4150
-Entry Wire Line
-	5250 4150 5350 4250
-Entry Wire Line
-	5250 4250 5350 4350
-Entry Wire Line
-	5250 4350 5350 4450
 Wire Bus Line
 	4150 3550 4150 4750
 Wire Bus Line
 	5250 3350 5250 4750
-Text Label 5350 3250 0    60   ~ 0
-a12
-Text Label 5350 3450 0    60   ~ 0
-a10
-Text Label 5350 3550 0    60   ~ 0
-a9
-Text Label 5350 3650 0    60   ~ 0
-a8
-Text Label 5350 3750 0    60   ~ 0
-a7
-Text Label 5350 3850 0    60   ~ 0
-a6
-Text Label 5350 3950 0    60   ~ 0
-a5
-Text Label 5350 4050 0    60   ~ 0
-a4
-Text Label 5350 4150 0    60   ~ 0
-a3
-Text Label 5350 4250 0    60   ~ 0
-a2
-Text Label 5350 4350 0    60   ~ 0
-a1
-Text Label 5350 4450 0    60   ~ 0
-a0
 Wire Wire Line
 	8000 3250 8350 3250
 Wire Wire Line
@@ -637,72 +944,8 @@ Wire Wire Line
 	8350 4350 8000 4350
 Wire Wire Line
 	8350 4450 8000 4450
-Entry Wire Line
-	7900 3350 8000 3450
-Entry Wire Line
-	7900 3450 8000 3550
-Entry Wire Line
-	7900 3550 8000 3650
-Entry Wire Line
-	7900 3650 8000 3750
-Entry Wire Line
-	7900 3750 8000 3850
-Entry Wire Line
-	7900 3850 8000 3950
-Entry Wire Line
-	7900 3950 8000 4050
-Entry Wire Line
-	7900 4050 8000 4150
-Entry Wire Line
-	7900 4150 8000 4250
-Entry Wire Line
-	7900 4250 8000 4350
-Entry Wire Line
-	7900 4350 8000 4450
 Wire Bus Line
 	7900 3350 7900 4750
-Text Label 8000 3250 0    60   ~ 0
-a12
-Text Label 8000 3450 0    60   ~ 0
-a10
-Text Label 8000 3550 0    60   ~ 0
-a9
-Text Label 8000 3650 0    60   ~ 0
-a8
-Text Label 8000 3750 0    60   ~ 0
-a7
-Text Label 8000 3850 0    60   ~ 0
-a6
-Text Label 8000 3950 0    60   ~ 0
-a5
-Text Label 8000 4050 0    60   ~ 0
-a4
-Text Label 8000 4150 0    60   ~ 0
-a3
-Text Label 8000 4250 0    60   ~ 0
-a2
-Text Label 8000 4350 0    60   ~ 0
-a1
-Text Label 8000 4450 0    60   ~ 0
-a0
-$Comp
-L VCC #PWR015
-U 1 1 5985AEF2
-P 7900 2500
-F 0 "#PWR015" H 7900 2350 50  0001 C CNN
-F 1 "VCC" H 7900 2650 50  0000 C CNN
-F 2 "" H 7900 2500 50  0000 C CNN
-F 3 "" H 7900 2500 50  0000 C CNN
-	1    7900 2500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8350 2950 7900 2950
-Wire Wire Line
-	7900 2500 7900 3050
-Wire Wire Line
-	7900 3050 8350 3050
-Connection ~ 7900 2950
 Wire Wire Line
 	1450 2950 1450 1950
 Wire Wire Line
@@ -715,210 +958,152 @@ Wire Wire Line
 	3850 3350 4300 3350
 Wire Wire Line
 	3850 3250 4300 3250
-Text Label 3850 3450 0    60   ~ 0
-a10
-Text Label 3850 3350 0    60   ~ 0
-a11_conn
-Text Label 3850 3250 0    60   ~ 0
-a12
 Wire Wire Line
 	3850 3150 4300 3150
-Text Label 3850 3150 0    60   ~ 0
-a13_conn
-$Comp
-L CONN_01X03 J1
-U 1 1 5985B670
-P 1100 1100
-F 0 "J1" H 1100 1300 50  0000 C CNN
-F 1 "CONN_01X03" V 1200 1100 50  0001 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 1100 1100 50  0001 C CNN
-F 3 "" H 1100 1100 50  0000 C CNN
-	1    1100 1100
-	-1   0    0    -1  
-$EndComp
-$Comp
-L CONN_01X03 J2
-U 1 1 5985B827
-P 2500 1100
-F 0 "J2" H 2500 1300 50  0000 C CNN
-F 1 "CONN_01X03" V 2600 1100 50  0001 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 2500 1100 50  0001 C CNN
-F 3 "" H 2500 1100 50  0000 C CNN
-	1    2500 1100
-	-1   0    0    -1  
-$EndComp
-$Comp
-L CONN_01X03 J3
-U 1 1 5985B872
-P 3750 1100
-F 0 "J3" H 3750 1300 50  0000 C CNN
-F 1 "CONN_01X03" V 3850 1100 50  0001 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 3750 1100 50  0001 C CNN
-F 3 "" H 3750 1100 50  0000 C CNN
-	1    3750 1100
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
-	1300 1000 1750 1000
-Text Label 1300 1000 0    60   ~ 0
-a13_conn
+	1750 850  2200 850 
 Wire Wire Line
-	1300 1100 1750 1100
-Wire Wire Line
-	1300 1200 1900 1200
-$Comp
-L VCC #PWR016
-U 1 1 5985BD5B
-P 1900 1200
-F 0 "#PWR016" H 1900 1050 50  0001 C CNN
-F 1 "VCC" H 1900 1350 50  0000 C CNN
-F 2 "" H 1900 1200 50  0000 C CNN
-F 3 "" H 1900 1200 50  0000 C CNN
-	1    1900 1200
-	1    0    0    -1  
-$EndComp
+	1750 950  2200 950 
 Wire Wire Line
 	5350 3150 5700 3150
-Text Label 5350 3150 0    60   ~ 0
-a13_u1
-Text Label 8000 3150 0    60   ~ 0
-a13_u2
 Wire Wire Line
 	8000 3150 8350 3150
-Text Label 1300 1100 0    60   ~ 0
-a13_u1
-Text Label 2700 1100 0    60   ~ 0
-a11_u1
 Wire Wire Line
-	2700 1100 3150 1100
-Text Label 5350 3350 0    60   ~ 0
-a11_u1
-Text Label 8000 3350 0    60   ~ 0
-a11_u2
+	2900 950  3350 950 
 Wire Wire Line
-	2700 1000 3150 1000
-Text Label 2700 1000 0    60   ~ 0
-a11_conn
-Text Label 2700 1200 0    60   ~ 0
-a12
+	2900 850  3350 850 
 Wire Wire Line
-	2700 1200 3150 1200
-Text Label 3950 1200 0    60   ~ 0
-a11_conn
+	2900 1050 3350 1050
 Wire Wire Line
-	3950 1200 4400 1200
+	4050 1050 4500 1050
 Wire Wire Line
 	5350 2750 5700 2750
-Text Label 5350 2750 0    60   ~ 0
-/ce_u1
-Text Label 3950 1100 0    60   ~ 0
-/ce_u1
 Wire Wire Line
-	3950 1100 4400 1100
-$Comp
-L GND #PWR017
-U 1 1 5985D3ED
-P 4600 1000
-F 0 "#PWR017" H 4600 750 50  0001 C CNN
-F 1 "GND" H 4600 850 50  0000 C CNN
-F 2 "" H 4600 1000 50  0000 C CNN
-F 3 "" H 4600 1000 50  0000 C CNN
-	1    4600 1000
-	1    0    0    -1  
-$EndComp
+	4050 950  4500 950 
 Wire Wire Line
-	4600 1000 3950 1000
+	4700 850  4050 850 
 Wire Bus Line
 	7900 4750 4150 4750
 Wire Wire Line
 	8350 2750 8000 2750
-Text Label 8000 2750 0    60   ~ 0
-/ce_u2
-$Comp
-L CONN_01X03 J4
-U 1 1 5985DBF9
-P 6100 1100
-F 0 "J4" H 6100 1300 50  0000 C CNN
-F 1 "CONN_01X03" V 6200 1100 50  0001 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 6100 1100 50  0001 C CNN
-F 3 "" H 6100 1100 50  0000 C CNN
-	1    6100 1100
-	-1   0    0    -1  
-$EndComp
-$Comp
-L CONN_01X03 J5
-U 1 1 5985DC42
-P 7500 1100
-F 0 "J5" H 7500 1300 50  0000 C CNN
-F 1 "CONN_01X03" V 7600 1100 50  0001 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 7500 1100 50  0001 C CNN
-F 3 "" H 7500 1100 50  0000 C CNN
-	1    7500 1100
-	-1   0    0    -1  
-$EndComp
-$Comp
-L CONN_01X03 J6
-U 1 1 5985DC9A
-P 8650 1100
-F 0 "J6" H 8650 1300 50  0000 C CNN
-F 1 "CONN_01X03" V 8750 1100 50  0001 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 8650 1100 50  0001 C CNN
-F 3 "" H 8650 1100 50  0000 C CNN
-	1    8650 1100
-	-1   0    0    -1  
-$EndComp
-Text Label 6300 1100 0    60   ~ 0
-a13_u2
 Wire Wire Line
-	6300 1100 6750 1100
+	7800 850  8250 850 
 Wire Wire Line
-	6300 1000 6750 1000
-Text Label 6300 1000 0    60   ~ 0
+	7800 950  8250 950 
+Wire Wire Line
+	7800 1050 8250 1050
+Wire Wire Line
+	8950 950  9400 950 
+Wire Wire Line
+	8950 850  9600 850 
+Wire Wire Line
+	8950 1050 9400 1050
+Wire Wire Line
+	2000 1550 2450 1550
+Wire Wire Line
+	2000 1450 2450 1450
+Wire Wire Line
+	2450 1650 2000 1650
+Wire Wire Line
+	5350 2950 5700 2950
+Wire Wire Line
+	5350 3050 5700 3050
+Wire Wire Line
+	8000 2950 8350 2950
+Wire Wire Line
+	8000 3050 8350 3050
+Wire Wire Line
+	3150 1550 3600 1550
+Wire Wire Line
+	3150 1450 3600 1450
+Wire Wire Line
+	3600 1650 3150 1650
+Wire Wire Line
+	6900 1550 7350 1550
+Wire Wire Line
+	7350 1650 6900 1650
+Wire Wire Line
+	8050 1550 8500 1550
+Wire Wire Line
+	8050 1450 8500 1450
+Wire Wire Line
+	8500 1650 8050 1650
+Wire Wire Line
+	1250 850  800  850 
+Wire Wire Line
+	1250 950  800  950 
+Wire Wire Line
+	1250 1050 800  1050
+Text Label 800  950  0    60   ~ 0
+a13_u1
+Text Label 800  1050 0    60   ~ 0
+a13_u1
+Wire Wire Line
+	1750 1050 2200 1050
+$Comp
+L GND #PWR025
+U 1 1 59AA85C2
+P 2200 1050
+F 0 "#PWR025" H 2200 800 50  0001 C CNN
+F 1 "GND" H 2200 900 50  0000 C CNN
+F 2 "" H 2200 1050 50  0000 C CNN
+F 3 "" H 2200 1050 50  0000 C CNN
+	1    2200 1050
+	1    0    0    -1  
+$EndComp
+Text Label 6650 950  0    60   ~ 0
 a13_conn
 $Comp
-L VCC #PWR018
-U 1 1 5985E083
-P 6900 1200
-F 0 "#PWR018" H 6900 1050 50  0001 C CNN
-F 1 "VCC" H 6900 1350 50  0000 C CNN
-F 2 "" H 6900 1200 50  0000 C CNN
-F 3 "" H 6900 1200 50  0000 C CNN
-	1    6900 1200
+L VCC #PWR026
+U 1 1 59AA8955
+P 7100 850
+F 0 "#PWR026" H 7100 700 50  0001 C CNN
+F 1 "VCC" H 7100 1000 50  0000 C CNN
+F 2 "" H 7100 850 50  0000 C CNN
+F 3 "" H 7100 850 50  0000 C CNN
+	1    7100 850 
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6900 1200 6300 1200
-Text Label 7700 1000 0    60   ~ 0
-a11_conn
-Wire Wire Line
-	7700 1000 8150 1000
-Wire Wire Line
-	7700 1100 8150 1100
-Wire Wire Line
-	7700 1200 8150 1200
-Text Label 7700 1100 0    60   ~ 0
-a11_u2
-Text Label 7700 1200 0    60   ~ 0
-a12
-Wire Wire Line
-	8850 1100 9300 1100
-Text Label 8850 1100 0    60   ~ 0
-/ce_u2
-Wire Wire Line
-	8850 1000 9500 1000
-Wire Wire Line
-	8850 1200 9300 1200
-Text Label 8850 1200 0    60   ~ 0
-a11_conn
+Text Label 5700 850  0    60   ~ 0
+a13_u2
 $Comp
-L GND #PWR019
-U 1 1 5985E9CF
-P 9500 1000
-F 0 "#PWR019" H 9500 750 50  0001 C CNN
-F 1 "GND" H 9500 850 50  0000 C CNN
-F 2 "" H 9500 1000 50  0000 C CNN
-F 3 "" H 9500 1000 50  0000 C CNN
-	1    9500 1000
+L CONN_02X03 J4
+U 1 1 59AA895C
+P 6400 950
+F 0 "J4" H 6400 1150 50  0000 C CNN
+F 1 "CONN_02X03" H 6400 750 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x03" H 6400 -250 50  0001 C CNN
+F 3 "" H 6400 -250 50  0000 C CNN
+	1    6400 950 
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	6650 850  7100 850 
+Wire Wire Line
+	6650 950  7100 950 
+Wire Wire Line
+	6150 850  5700 850 
+Wire Wire Line
+	6150 950  5700 950 
+Wire Wire Line
+	6150 1050 5700 1050
+Text Label 5700 950  0    60   ~ 0
+a13_u2
+Text Label 5700 1050 0    60   ~ 0
+a13_u2
+Wire Wire Line
+	6650 1050 7100 1050
+$Comp
+L GND #PWR027
+U 1 1 59AA896A
+P 7100 1050
+F 0 "#PWR027" H 7100 800 50  0001 C CNN
+F 1 "GND" H 7100 900 50  0000 C CNN
+F 2 "" H 7100 1050 50  0000 C CNN
+F 3 "" H 7100 1050 50  0000 C CNN
+	1    7100 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 1450 7350 1450
 $EndSCHEMATC
