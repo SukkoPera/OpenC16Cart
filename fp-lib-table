@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name C16_Cart_Conn)(type KiCad)(uri "$(KIPRJMOD)/C16_Cart_Conn.pretty")(options "")(descr ""))
+)
