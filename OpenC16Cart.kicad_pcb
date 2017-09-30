@@ -1077,7 +1077,7 @@
       (net 35 /a14_u2))
     (pad 28 thru_hole oval (at -16.51 -7.62 90) (size 1.50114 2.19964) (drill 0.8001) (layers *.Cu *.Mask F.SilkS)
       (net 2 VCC))
-    (model walter/pth_circuits/dil_28-600_socket.wrl
+    (model ${P3D_WALTER}/walter/pth_circuits/dil_28-600_socket.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1157,7 +1157,7 @@
       (net 33 /a14_u1))
     (pad 28 thru_hole oval (at -16.51 -7.62 90) (size 1.50114 2.19964) (drill 0.8001) (layers *.Cu *.Mask F.SilkS)
       (net 2 VCC))
-    (model walter/pth_circuits/dil_28-600_socket.wrl
+    (model ${P3D_WALTER}/walter/pth_circuits/dil_28-600_socket.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
