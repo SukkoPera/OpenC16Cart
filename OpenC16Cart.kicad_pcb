@@ -1204,7 +1204,7 @@
   )
   (gr_arc (start 172 127) (end 173.5 127) (angle 90) (layer Edge.Cuts) (width 0.15))
   (gr_arc (start 123 127) (end 123 128.5) (angle 90) (layer Edge.Cuts) (width 0.15))
-  (gr_text V2 (at 124.46 118.872) (layer B.SilkS)
+  (gr_text V3 (at 124.46 118.872) (layer B.SilkS)
     (effects (font (size 1 1) (thickness 0.2)) (justify mirror))
   )
   (gr_text github.com/SukkoPera/OpenC16Cart (at 157.48 118.872) (layer B.SilkS)
