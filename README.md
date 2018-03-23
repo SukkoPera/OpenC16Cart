@@ -12,9 +12,6 @@ Since I had already built an [Open Hardware cartridge for the Commodore 64](http
 
 Since I did not own a cartridge, I set out to find images of PCBs of real cartridges on the Net, only to find out that those are rare as well. In the end I found a couple of [top](https://github.com/SukkoPera/OpenC16Cart/blob/master/doc/inspiration-top.jpg)+[bottom](https://github.com/SukkoPera/OpenC16Cart/blob/master/doc/inspiration-bottom.jpg) images, and started to reverse engineer the design from those. With the help of [some service manuals](http://www.zimmers.net/anonftp/pub/cbm/schematics/computers/plus4/index.html), I came up with OpenC16Cart. I then expanded it to have the ability of using bigger (E(E))PROMs which could store multiple ROM images.
 
-### Installation
-TBD
-
 ### Configuration
 C16 ROMs are normally 16 or 32 Kb (see list below). OpenC16Cart supports both, 8 KB might or might not work, I'm not aware of any carts of this size.
 
