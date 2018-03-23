@@ -32,7 +32,7 @@ The cartridge also has some more jumpers, named J1-J6, which are there because t
 
 I'm not aware of any carts using different settings at the moment, so it is recommended to keep them as described above.
 
-## Commodore 16 Cartridge list
+## Commodore 16 Cartridge List
 Only a handful official cartridges seem to have been released:
 * Commodore Jack Attack
 * Commodore Viduzzles
