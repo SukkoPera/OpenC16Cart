@@ -6,7 +6,7 @@ OpenC16Cart is an Open Hardware 8/16/32 KB Cartridge for the Commodore 16, Plus/
 ### Summary
 > Like all the other Commodore 8-bit systems, the Plus/4 had a cartridge port for ROM-based software. Because the computer did not do well in the marketplace, however, very few were released. - Bo Zimmerman
 
-One day I decided to fix my old Commodore 16. I found out about [Diag264](http://inchocks.co.uk/commodore/Diag264/HTMLManual/Diag264.htm) and, since I knew that C16 carts weren't exactly common (I have never seen one "in the flesh"!), I was somewhat surprised to learn that [people are deliberately destroying genuine carts to use them as donors to build a Diag264](http://blog.tynemouthsoftware.co.uk/2014/03/commodore-264-c16-and-plus-4-diagnostic.html).
+One day I decided to fix my old Commodore 16. I found out about [Diag264](http://www.inchocks.co.uk/commodore/Diag264/) and, since I knew that C16 carts weren't exactly common (I have never seen one "in the flesh"!), I was somewhat surprised to learn that [people are deliberately destroying genuine carts to use them as donors to build a Diag264](http://blog.tynemouthsoftware.co.uk/2014/03/commodore-264-c16-and-plus-4-diagnostic.html).
 
 Since I had already built an [Open Hardware cartridge for the Commodore 64](https://github.com/SukkoPera/OpenC64Cart), I thought that one for the C16 could not be much different, and so this project was born.
 
