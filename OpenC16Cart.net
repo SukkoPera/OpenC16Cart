@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/sukko/Documents/kicad/OpenC16Cart/OpenC16Cart.sch)
-    (date "Thu 03 Aug 2023 22:25:34 CEST")
+    (date "Thu 03 Aug 2023 22:51:33 CEST")
     (tool "Eeschema 5.1.12")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -37,7 +37,7 @@
       (tstamp 650B8C10))
     (comp (ref H1)
       (value MountingHole)
-      (footprint MountingHole:MountingHole_3.2mm_M3)
+      (footprint MountingHole:MountingHole_5mm)
       (datasheet ~)
       (libsource (lib Mechanical) (part MountingHole) (description "Mounting Hole without connection"))
       (sheetpath (names /) (tstamps /))

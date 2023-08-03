@@ -378,7 +378,7 @@ U 1 1 650BAE70
 P 10565 6115
 F 0 "H1" H 10665 6161 50  0000 L CNN
 F 1 "MountingHole" H 10665 6070 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 10565 6115 50  0001 C CNN
+F 2 "MountingHole:MountingHole_5mm" H 10565 6115 50  0001 C CNN
 F 3 "~" H 10565 6115 50  0001 C CNN
 	1    10565 6115
 	1    0    0    -1  
