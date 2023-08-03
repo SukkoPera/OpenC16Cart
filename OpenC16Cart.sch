@@ -18,7 +18,6 @@ NoConn ~ 1655 1675
 NoConn ~ 1655 1875
 NoConn ~ 1655 2075
 NoConn ~ 1655 2175
-NoConn ~ 3155 1475
 NoConn ~ 3155 1675
 Entry Wire Line
 	6150 2255 6250 2155
@@ -717,14 +716,6 @@ Text Notes 8050 4860 0    60   ~ 0
 64 KB MODE:\n- A14 = ~CS0~: will be low whenever ~C1LO~ or ~C2LO~ is low\n- A15 = ~C2~: will be low whenever ~C2LO~ or ~C2HI~ is low\n\nEEPROM MAP:\nA15 A14 Area\n0    0   C2 Low\n0    1   C2 High\n1    0   C1 Low\n1    1   C1 High\n\n\n32 KB MODE - 2 BANKS:\n- A14 = ~CS0~: will be low whenever ~C1LO~ or ~C2LO~ is low\n- A15 = Switchable (VCC/GND)\n\nEEPROM MAP:\nA15 A14 Area\n0    0   Cx Low (Bank 0)\n0    1   Cx High (Bank 0)\n1    0   Cx Low (Bank 1)\n1    1   Cx High (Bank 1)\n\nCartridge will respond to both C1 and C2 slots.\nIf unwanted: Remove D1/D2 or D3 accordingly.\n\n\n16 KB MODE - 4 BANKS:\n- A14 = Switchable (VCC/GND)\n- A15 = Switchable (VCC/GND)\n\nEEPROM MAP:\nA15 A14 Area\n0    0   Bank 0\n0    1   Bank 1\n1    0   Bank 2\n1    1   Bank3\n\nCartridge will respond to all C1 and C2 low/high slots.\nIf unwanted: Remove D1/D2 or D3 accordingly\n(No way to respond to a single C2 slot).
 Text Label 4735 5530 0    60   ~ 0
 ~c1hi
-Wire Bus Line
-	6250 1455 6250 2155
-Wire Bus Line
-	1205 2375 1205 3080
-Wire Bus Line
-	3455 2075 3455 3375
-Wire Bus Line
-	4390 1655 4390 2955
 $Comp
 L void:Void V2
 U 1 1 652D5807
@@ -747,4 +738,46 @@ F 3 "" H 9955 6125 50  0001 C CNN
 	1    9955 6125
 	1    0    0    -1  
 $EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 66884D32
+P 3550 7045
+F 0 "SW1" H 3550 7330 50  0000 C CNN
+F 1 "BTN_RESET" H 3550 7239 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H8mm" H 3550 7245 50  0001 C CNN
+F 3 "~" H 3550 7245 50  0001 C CNN
+	1    3550 7045
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 7045 3835 7045
+Wire Wire Line
+	3835 7045 3835 7135
+$Comp
+L power:GND #PWR0103
+U 1 1 66889CBF
+P 3835 7135
+F 0 "#PWR0103" H 3835 6885 50  0001 C CNN
+F 1 "GND" H 3840 6962 50  0000 C CNN
+F 2 "" H 3835 7135 50  0001 C CNN
+F 3 "" H 3835 7135 50  0001 C CNN
+	1    3835 7135
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3155 1475 3355 1475
+Text Label 3355 1475 2    60   ~ 0
+~reset
+Text Label 3055 7045 0    60   ~ 0
+~reset
+Wire Wire Line
+	3350 7045 3055 7045
+Wire Bus Line
+	6250 1455 6250 2155
+Wire Bus Line
+	1205 2375 1205 3080
+Wire Bus Line
+	3455 2075 3455 3375
+Wire Bus Line
+	4390 1655 4390 2955
 $EndSCHEMATC
