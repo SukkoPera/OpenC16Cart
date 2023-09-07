@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/sukko/Documents/kicad/OpenC16Cart/OpenC16Cart.sch)
-    (date "Thu 03 Aug 2023 22:51:33 CEST")
+    (date "Thu 07 Sep 2023 17:39:42 CEST")
     (tool "Eeschema 5.1.12")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -64,7 +64,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 6521B967))
     (comp (ref R1)
-      (value 3.3k)
+      (value 270)
       (footprint Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal)
       (datasheet ~)
       (libsource (lib Device) (part R) (description Resistor))

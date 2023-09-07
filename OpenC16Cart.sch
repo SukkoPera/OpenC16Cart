@@ -629,7 +629,7 @@ L Device:R R1
 U 1 1 65223A98
 P 5490 5120
 F 0 "R1" H 5420 5074 50  0000 R CNN
-F 1 "3.3k" H 5420 5165 50  0000 R CNN
+F 1 "270" H 5420 5165 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 5420 5120 50  0001 C CNN
 F 3 "~" H 5490 5120 50  0001 C CNN
 	1    5490 5120
@@ -780,4 +780,6 @@ Wire Bus Line
 	3455 2075 3455 3375
 Wire Bus Line
 	4390 1655 4390 2955
+Text Notes 5815 5195 0    60   ~ 0
+Yes, we need\na stiff pull-up!
 $EndSCHEMATC
