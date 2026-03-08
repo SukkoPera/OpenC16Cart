@@ -25,10 +25,10 @@ In 16 kB mode, you get 4 slots, which can be selected through appropriate placem
 
 |ROM Image #|A15|A14|ROM Area   |
 |-----------|---|---|-----------|
-|0          |0  | 0 |$0000-$3fff|
-|1          |0  | 1 |$4000-$7fff|
-|2          |1  | 0 |$8000-$bfff|
-|3          |1  | 1 |$c000-$ffff|
+|0          |0  | 0 |$0000-$3fff  xx|
+|1          |0  | 1 |$4000-$7fff\nxx|
+|2          |1  | 0 |$8000-$bfff<br/>xx|
+|3          |1  | 1 |$c000-$ffff<br>xx|
 
 Note that the cartridge will respond to all C1 and C2 low/high slots. If this is unwanted, cut open JP1/2/3 accordingly (or do not mount D1/2/3). Also note there is no way to respond to a single C2 slot.
 
