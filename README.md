@@ -14,7 +14,7 @@ Since I did not own a cartridge, I set out to find images of PCBs of real cartri
 
 With V5, I even added the possibility of having a single-EEPROM 64 kB cartridge spanning both the C1 and C2 slots.
 
-**Please note that V5 is a 44-pin cartridge. To use it, you will need a [xxx](xxx) [^v4].**
+**Please note that V5 is a 44-pin cartridge. To use it, you will need a [Plus4MultiExpander](https://github.com/SukkoPera/Plus4MultiExpander) [^v4].**
 
 ## Configuration
 As of V5, OpenC16Cart might work in different modes. Ideally, the cartridge is used with a 64 kb EEPROM, in which case the following configurations will be available:
@@ -29,7 +29,7 @@ In 16 kB mode, you get 4 slots, which can be selected through appropriate placem
 |2          |1  | 0 |$8000-$bfff|
 |3          |1  | 1 |$c000-$ffff|
 
-Note that the cartridge will respond to all C1 and C2 low/high slots. If this is unwanted, remove D1/D2 or D3 accordingly. Also note there is no way to respond to a single C2 slot.
+Note that the cartridge will respond to all C1 and C2 low/high slots. If this is unwanted, cut open JP1/2/3 accordingly (or do not mount D1/2/3). Also note there is no way to respond to a single C2 slot.
 
 ### 32 kB Mode
 In 32 kB mode, SW2 must be placed in the `DIR` position and 2 banks will be available:
@@ -41,9 +41,7 @@ In 32 kB mode, SW2 must be placed in the `DIR` position and 2 banks will be avai
 
 Within each slot, the low ROM must occupy the first half of the allocated space, while the high ROM will take the other half.
 
-
-Cartridge will respond to both C1 and C2 slots.
-If unwanted: Remove D1/D2 or D3 accordingly.
+As in 16 kB mode, you might want to play with the jumpers or diodes.
 
 ### 64 kB Mode
 In 64 kB mode, both SW2 and SW3 must be placed in the `DIR` position and, obviously, only a single bank will be available.
@@ -57,9 +55,7 @@ The allocation of the slots is as follows:
 |C1 Low |$8000-$bfff|
 |C1 High|$c000-$ffff|
 
----
-
-For the 32 KB configuration, use both the LO and HI ROMs. 32 Kb ROM are usually distributed as two 16 Kb chunks, and one goes on each ROM, in corresponding positions. In this case you will also be able to switch among 4 different images, by moving the A14/A15 jumpers on **BOTH** ROMs.
+Note that C2 actually goes first.
 
 ## Commodore 16 Cartridge List
 Only a handful official cartridges seem to have been released:
@@ -102,4 +98,4 @@ You can also buy me a coffee if you want:
 
 <a href='https://ko-fi.com/L3L0U18L' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-[^v4] Although this *might* be amended at some point, that's why there currently there is no V4, it was reserved for that.
+[^v4]: Although this *might* be amended at some point, that's why there currently there is no V4, it was reserved for that.
