@@ -25,10 +25,10 @@ In 16 kB mode, you get 4 slots, which can be selected through appropriate placem
 
 |ROM Image #|SW3|SW2|ROM Area   |
 |-----------|---|---|-----------|
-|0          |0  | 0 |$0000-$3fff|
-|1          |0  | 1 |$4000-$7fff|
-|2          |1  | 0 |$8000-$bfff|
-|3          |1  | 1 |$c000-$ffff|
+|0          |LO |LO |$0000-$3fff|
+|1          |LO |HI |$4000-$7fff|
+|2          |HI |LO |$8000-$bfff|
+|3          |HI |HI |$c000-$ffff|
 
 Note that the cartridge will respond to all C1 and C2 low/high slots. If this is unwanted, cut open JP1/2/3 accordingly (or do not mount D1/2/3). Also note there is no way to respond to a single C2 slot.
 
@@ -37,10 +37,8 @@ In 32 kB mode, SW2 must be placed in the `DIR` position and 2 banks will be avai
 
 |ROM Image #|SW3|ROM Area                                      |
 |-----------|---|----------------------------------------------|
-|0          |0  |Low ROM: $0000-$3fff<br/>High ROM: $4000-$7fff|
-|1          |1  |Low ROM: $8000-$bfff<br/>High ROM: $c000-$ffff|
-
-Within each slot, the low ROM must occupy the first half of the allocated space, while the high ROM will take the other half.
+|0          |LO |Low ROM: $0000-$3fff<br/>High ROM: $4000-$7fff|
+|1          |HI |Low ROM: $8000-$bfff<br/>High ROM: $c000-$ffff|
 
 As in 16 kB mode, you might want to play with the jumpers or diodes.
 
