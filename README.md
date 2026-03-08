@@ -23,7 +23,7 @@ As of V5, OpenC16Cart might work in different modes. Ideally, the cartridge is u
 ### 16 kB Mode
 In 16 kB mode, you get 4 slots, which can be selected through appropriate placement of the SW2 and SW3 jumpers:
 
-|ROM Image #|A15|A14|ROM Area   |
+|ROM Image #|SW3|SW2|ROM Area   |
 |-----------|---|---|-----------|
 |0          |0  | 0 |$0000-$3fff|
 |1          |0  | 1 |$4000-$7fff|
@@ -33,9 +33,9 @@ In 16 kB mode, you get 4 slots, which can be selected through appropriate placem
 Note that the cartridge will respond to all C1 and C2 low/high slots. If this is unwanted, cut open JP1/2/3 accordingly (or do not mount D1/2/3). Also note there is no way to respond to a single C2 slot.
 
 ### 32 kB Mode
-In 32 kB mode, SW2 must be placed in the `DIR` position and 2 banks will be available:
+In 32 kB mode, SW2 must be placed in the `DIR` position and 2 banks will be available through manipulation of SW3:
 
-|ROM Image #|A15|ROM Area                                      |
+|ROM Image #|SW3|ROM Area                                      |
 |-----------|---|----------------------------------------------|
 |0          |0  |Low ROM: $0000-$3fff<br/>High ROM: $4000-$7fff|
 |1          |1  |Low ROM: $8000-$bfff<br/>High ROM: $c000-$ffff|
@@ -47,16 +47,11 @@ As in 16 kB mode, you might want to play with the jumpers or diodes.
 ### 64 kB Mode
 In 64 kB mode, both SW2 and SW3 must be placed in the `DIR` position and, obviously, only a single bank will be available.
 
-The allocation of the slots is as follows:
+|ROM Image #|ROM Area                                                                                                    |
+|-----------|------------------------------------------------------------------------------------------------------------|
+|0          |C2 Low ROM: $0000-$3fff<br/>C2 High ROM: $4000-$7fff<br>C1 Low ROM: $8000-$bfff<br/>C1 High ROM: $c000-$ffff|
 
-|Slot   |ROM Area   |
-|-------|-----------|
-|C2 Low |$0000-$3fff|
-|C2 High|$4000-$7fff|
-|C1 Low |$8000-$bfff|
-|C1 High|$c000-$ffff|
-
-Note that C2 actually goes first.
+Note that **C2 goes first**.
 
 ## Releases
 If you want to get this board produced, you are recommended to get [the latest release](https://github.com/SukkoPera/OpenC16Cart/releases) rather than the current git version, as the latter might be under development and is not guaranteed to be working.
