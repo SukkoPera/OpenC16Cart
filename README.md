@@ -14,7 +14,8 @@ Since I did not own a cartridge, I set out to find images of PCBs of real cartri
 
 With V5, I even added the possibility of having a single-EEPROM 64 kB cartridge spanning both the C1 and C2 slots.
 
-**Please note that V5 is a 44-pin cartridge. To use it, you will need a [Plus4MultiExpander](https://github.com/SukkoPera/Plus4MultiExpander) [^v4].**
+> [!WARNING]
+> V5 is a 44-pin cartridge. It is not compatible with a stock C16/+4. To use it, you will need a [Plus4MultiExpander](https://github.com/SukkoPera/Plus4MultiExpander) [^v4].
 
 ## Configuration
 As of V5, OpenC16Cart might work in different modes. Ideally, the cartridge is used with a 64 kb EEPROM, in which case the following configurations will be available:
