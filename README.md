@@ -57,21 +57,6 @@ The allocation of the slots is as follows:
 
 Note that C2 actually goes first.
 
-## Commodore 16 Cartridge List
-Only a handful official cartridges seem to have been released:
-* Commodore Jack Attack
-* Commodore Viduzzles
-* Commodore Atomic Mission (16K)
-* Commodore Strange Odyssey (16K)
-* Commodore Pirate Adventure (16K)
-* Commodore C-16 Tutor
-* Commodore Logo (32K)
-* Commodore Diagnostic Test (TED Diagnostic Rev 1.5)
-* Commodore Script/Plus
-* Commodore Financial Advisor
-
-*(The above list is courtesy of [C64 Wiki](https://www.c64-wiki.com/wiki/Commodore_16#Cartridges))*
-
 ## Releases
 If you want to get this board produced, you are recommended to get [the latest release](https://github.com/SukkoPera/OpenC16Cart/releases) rather than the current git version, as the latter might be under development and is not guaranteed to be working.
 
@@ -98,4 +83,4 @@ You can also buy me a coffee if you want:
 
 <a href='https://ko-fi.com/L3L0U18L' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-[^v4]: Although this *might* be amended at some point, that's why there currently there is no V4, it was reserved for that.
+[^v4]: Although this *might* be amended at some point, that's why there currently is no V4, it was reserved for that.
