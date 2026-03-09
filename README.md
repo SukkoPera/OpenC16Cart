@@ -1,4 +1,9 @@
 # OpenC16Cart
+
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/SukkoPera/OpenC16Cart)
+![GitHub Release Date](https://img.shields.io/github/release-date/SukkoPera/OpenC16Cart?color=blue&label=last%20release)
+![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/SukkoPera/OpenC16Cart/latest?color=orange)
+
 OpenC16Cart is an Open Hardware 8/16/32/64 KB Cartridge for the Commodore 16, Plus/4 and the rest of the Commodore 264 family.
 
 ![Board](img/render-top.png)
@@ -61,7 +66,7 @@ Every release is accompanied by its Bill Of Materials (BOM) file and any relevan
 **I am not providing ready-to-use gerber files**. If all you want is **to get boards made, I would really appreciate if you did so [in a way that supports the project](#support-the-project)**.
 
 ## License
-The OpenC16Cart documentation, including the design itself, is copyright &copy; SukkoPera 2019-2025 and is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+The OpenC16Cart documentation, including the design itself, is copyright &copy; SukkoPera 2019-2026 and is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 This documentation is distributed *as is* and WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES whatsoever with respect to its functionality, operability or use, including, without limitation, any implied warranties OF MERCHANTABILITY, SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE or infringement. We expressly disclaim any liability whatsoever for any direct, indirect, consequential, incidental or special damages, including, without limitation, lost revenues, lost profits, losses resulting from business interruption or loss of data, regardless of the form of action or legal theory under which the liability may be asserted, even if advised of the possibility or likelihood of such damages.
 
