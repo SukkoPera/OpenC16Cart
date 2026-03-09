@@ -1,7 +1,7 @@
 # OpenC16Cart
 OpenC16Cart is an Open Hardware 8/16/32/64 KB Cartridge for the Commodore 16, Plus/4 and the rest of the Commodore 264 family.
 
-![Board](https://raw.githubusercontent.com/SukkoPera/OpenC16Cart/master/doc/render-top.png)
+![Board](img/render-top.png)
 
 ## Summary
 > Like all the other Commodore 8-bit systems, the Plus/4 had a cartridge port for ROM-based software. Because the computer did not do well in the marketplace, however, very few were released. - Bo Zimmerman
