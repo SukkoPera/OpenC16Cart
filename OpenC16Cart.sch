@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Open Commodore 16/Plus4 Cartridge"
-Date "2023-10-03"
+Date "2026-03-09"
 Rev "5git"
 Comp "SukkoPera"
 Comment1 "http://www.zimmers.net/anonftp/pub/cbm/schematics/computers/plus4/Plus_4_Technical_Docs.pdf"
@@ -603,7 +603,7 @@ L Device:R R1
 U 1 1 65223A98
 P 6265 5120
 F 0 "R1" H 6195 5074 50  0000 R CNN
-F 1 "270" H 6195 5165 50  0000 R CNN
+F 1 "1k" H 6195 5165 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 6195 5120 50  0001 C CNN
 F 3 "~" H 6265 5120 50  0001 C CNN
 	1    6265 5120
@@ -687,7 +687,7 @@ Text Label 6755 5680 2    60   ~ 0
 Text Notes 5855 5960 0    60   ~ 0
 WIRED "AND"
 Text Notes 8050 4860 0    60   ~ 0
-64 KB MODE:\n- A14 = ~CS0~: will be low whenever ~C1LO~ or ~C2LO~ is low\n- A15 = ~C2~: will be low whenever ~C2LO~ or ~C2HI~ is low\n\nEEPROM MAP:\nA15 A14 Area\n0    0   C2 Low\n0    1   C2 High\n1    0   C1 Low\n1    1   C1 High\n\n\n32 KB MODE - 2 BANKS:\n- A14 = ~CS0~: will be low whenever ~C1LO~ or ~C2LO~ is low\n- A15 = Switchable (VCC/GND)\n\nEEPROM MAP:\nA15 A14 Area\n0    0   Cx Low (Bank 0)\n0    1   Cx High (Bank 0)\n1    0   Cx Low (Bank 1)\n1    1   Cx High (Bank 1)\n\nCartridge will respond to both C1 and C2 slots.\nIf unwanted: Remove D1/D2 or D3 accordingly.\n\n\n16 KB MODE - 4 BANKS:\n- A14 = Switchable (VCC/GND)\n- A15 = Switchable (VCC/GND)\n\nEEPROM MAP:\nA15 A14 Area\n0    0   Bank 0\n0    1   Bank 1\n1    0   Bank 2\n1    1   Bank3\n\nCartridge will respond to all C1 and C2 low/high slots.\nIf unwanted: Remove D1/D2 or D3 accordingly\n(No way to respond to a single C2 slot).
+64 KB MODE:\n- A14 = ~CS0~: will be low whenever ~C1LO~ or ~C2LO~ is low\n- A15 = ~C2~: will be low whenever ~C2LO~ or ~C2HI~ is low\n\nEEPROM MAP:\nA15 A14 Area\n0    0   C2 Low\n0    1   C2 High\n1    0   C1 Low\n1    1   C1 High\n\n\n32 KB MODE - 2 BANKS:\n- A14 = ~CS0~: will be low whenever ~C1LO~ or ~C2LO~ is low\n- A15 = Switchable (VCC/GND)\n\nEEPROM MAP:\nA15 A14 Area\n0    0   Cx Low (Bank 0)\n0    1   Cx High (Bank 0)\n1    0   Cx Low (Bank 1)\n1    1   Cx High (Bank 1)\n\nCartridge will respond to both C1 and C2 slots.\nIf unwanted: Remove D1/D2 or D3 accordingly.\n\n\n16 KB MODE - 4 BANKS:\n- A14 = Switchable (VCC/GND)\n- A15 = Switchable (VCC/GND)\n\nEEPROM MAP:\nA15 A14 Area\n0    0   Bank 0\n0    1   Bank 1\n1    0   Bank 2\n1    1   Bank 3\n\nCartridge will respond to all C1 and C2 low/high slots.\nIf unwanted: Remove D1/D2 or D3 accordingly\n(No way to respond to a single C2 slot).
 Text Label 5055 5530 0    60   ~ 0
 ~c1hi
 $Comp
@@ -746,8 +746,6 @@ Text Label 3055 7045 0    60   ~ 0
 ~reset
 Wire Wire Line
 	3350 7045 3055 7045
-Text Notes 6590 5195 0    60   ~ 0
-Yes, we need\na stiff pull-up!
 NoConn ~ 1655 2375
 NoConn ~ 1655 2475
 NoConn ~ 1655 1975
@@ -813,14 +811,6 @@ F 3 "~" H 1645 5530 50  0001 C CNN
 	1    1645 5530
 	-1   0    0    -1  
 $EndComp
-Wire Bus Line
-	6250 1455 6250 2155
-Wire Bus Line
-	1205 2675 1205 3380
-Wire Bus Line
-	3455 2075 3455 3375
-Wire Bus Line
-	4390 1655 4390 2955
 $Comp
 L void:Void V3
 U 1 1 667AE1F4
@@ -832,4 +822,12 @@ F 3 "" H 9370 6375 50  0001 C CNN
 	1    9370 6375
 	1    0    0    -1  
 $EndComp
+Wire Bus Line
+	6250 1455 6250 2155
+Wire Bus Line
+	1205 2675 1205 3380
+Wire Bus Line
+	3455 2075 3455 3375
+Wire Bus Line
+	4390 1655 4390 2955
 $EndSCHEMATC
