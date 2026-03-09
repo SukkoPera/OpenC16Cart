@@ -17,37 +17,39 @@ With V5, I even added the possibility of having a single-EEPROM 64 kB cartridge 
 > [!IMPORTANT]
 > V5 is a 44-pin cartridge. It is not compatible with a stock C16/+4. To use it, you will need a [Plus4MultiExpander](https://github.com/SukkoPera/Plus4MultiExpander) [^v4].
 
+V5 was designed in order to fit into [TFW8b's Stumpy Cases](https://www.tfw8b.com/product/commodore-c64-stumpy-cartridge-case/), but the actual fitting has never been checked.
+
 ## Configuration
 As of V5, OpenC16Cart might work in different modes. Ideally, the cartridge is used with a 64 kb EEPROM, in which case the following configurations will be available:
 
 ### 16 kB Mode
-In 16 kB mode, you get 4 slots, which can be selected through appropriate placement of the SW2 and SW3 jumpers:
+In 16 kB mode, you get 4 banks, which can be selected through appropriate placement of the SW2 and SW3 jumpers:
 
-|ROM Image #|SW3|SW2|ROM Area   |
-|-----------|---|---|-----------|
-|0          |LO |LO |$0000-$3fff|
-|1          |LO |HI |$4000-$7fff|
-|2          |HI |LO |$8000-$bfff|
-|3          |HI |HI |$c000-$ffff|
+|Bank|SW3|SW2|ROM Area   |
+|----|---|---|-----------|
+|0   |LO |LO |$0000-$3fff|
+|1   |LO |HI |$4000-$7fff|
+|2   |HI |LO |$8000-$bfff|
+|3   |HI |HI |$c000-$ffff|
 
 Note that the cartridge will respond to all C1 and C2 low/high slots. If this is unwanted, cut open JP1/2/3 accordingly (or do not mount D1/2/3). Also note there is no way to respond to a single C2 slot.
 
 ### 32 kB Mode
 In 32 kB mode, SW2 must be placed in the `DIR` position and 2 banks will be available through manipulation of SW3:
 
-|ROM Image #|SW3|ROM Area                                      |
-|-----------|---|----------------------------------------------|
-|0          |LO |Low ROM: $0000-$3fff<br/>High ROM: $4000-$7fff|
-|1          |HI |Low ROM: $8000-$bfff<br/>High ROM: $c000-$ffff|
+|Bank|SW3|ROM Area                                      |
+|----|---|----------------------------------------------|
+|0   |LO |Low ROM: $0000-$3fff<br/>High ROM: $4000-$7fff|
+|1   |HI |Low ROM: $8000-$bfff<br/>High ROM: $c000-$ffff|
 
 As in 16 kB mode, you might want to play with the jumpers or diodes.
 
 ### 64 kB Mode
 In 64 kB mode, both SW2 and SW3 must be placed in the `DIR` position and, obviously, only a single bank will be available.
 
-|ROM Image #|ROM Area                                                                                                    |
-|-----------|------------------------------------------------------------------------------------------------------------|
-|0          |C2 Low ROM: $0000-$3fff<br/>C2 High ROM: $4000-$7fff<br>C1 Low ROM: $8000-$bfff<br/>C1 High ROM: $c000-$ffff|
+|Bank|ROM Area                                                                                                    |
+|----|------------------------------------------------------------------------------------------------------------|
+|0   |C2 Low ROM: $0000-$3fff<br/>C2 High ROM: $4000-$7fff<br>C1 Low ROM: $8000-$bfff<br/>C1 High ROM: $c000-$ffff|
 
 Note that **C2 goes first**.
 
